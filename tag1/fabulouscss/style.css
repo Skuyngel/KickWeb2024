@@ -1,0 +1,34 @@
+/*-----Tags----*/
+body{
+   background-color: lavender;
+   
+}
+
+h1{
+    @font-face {
+        font-family: 'Gulax';
+        src: url(tag1/fabulouscss/Gulax-Regular.woff2) format(woff2);
+    }
+}
+
+p{
+    font-family: "quicksand", sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+
+/*-----ID----*/
+#poetry{
+
+}
+
+/*-----Klassen----*/
+*/ .first{
+
+}
+.second{
+
+}
+.third{
+
+}/*

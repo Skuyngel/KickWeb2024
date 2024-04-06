@@ -1,0 +1,527 @@
+@import url('https://use.typekit.net/mja5fbt.css');
+@keyframes sternli {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes liniengrowing {
+  from{
+    transform: scaleY(100%)
+  }
+
+  to {
+    transform: scaleY(150%);
+  }
+}
+
+@keyframes linienschrumpfing {
+  from{
+    transform: scaleY(100%)
+  }
+
+  to {
+    transform: scaleY(70%);
+  }
+}
+
+:root {
+    --background: rgb(248, 242, 234);
+    --color: red;
+}
+
+body {
+    font-family: "jaf-bernina-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    background-color: var(--background);
+    grid-template-columns: repeat(8, 1fr); /* 8 columns with equal width */
+    grid-template-rows: repeat(11, 1fr); /* 11 rows with equal height */
+    gap: 0px; /* Adjust gap between grid items as needed */
+  }
+  
+  .grid-item {
+    padding: 0; /* Add padding to grid items */
+    margin: 0;
+    /*border: 2px solid rgb(255, 255, 255); /* Add border to grid items for better visualization */
+  }
+
+  .baseline{
+    height: 3px;
+    width: 90%;
+    align-self: end;
+    justify-self: center;
+    grid-column: 1 / 9;
+    grid-row: 3;
+    background-color: black;
+  }
+
+  .line26{
+    height: 90%;
+    width: 1px;
+    background-color: black;
+    grid-column: 2;
+    grid-row: 2 / 7;
+    justify-self: center;
+    animation-name: liniengrowing;
+    animation-duration: 3s;
+    transform-origin: top;
+    animation-iteration-count: 7;
+    animation-direction: alternate;
+  }
+
+  .line17{
+    height: 90%;
+    width: 1px;
+    background-color: black;
+    grid-column: 3;
+    grid-row: 1 / 8;
+    justify-self: center;
+    align-self: end;
+    transform: translateY(-20px);
+    animation-name: liniengrowing;
+    animation-duration: 3s;
+    transform-origin: top;
+    animation-iteration-count: 7;
+    animation-delay: 1s;
+    animation-direction: alternate;
+  }
+
+  .line211{
+    height: 95%;
+    width: 1px;
+    background-color: black;
+    grid-column: 5;
+    grid-row: 2 / 12;
+    justify-self: center;
+    animation-name: linienschrumpfing;
+    animation-duration: 3s;
+    transform-origin: top;
+    animation-iteration-count: 7;
+    animation-direction: alternate;
+  }
+
+  .line210{
+    height: 94%;
+    width: 1px;
+    background-color: black;
+    grid-column: 6;
+    grid-row: 2 / 11;
+    justify-self: center;
+    animation-name: linienschrumpfing;
+    animation-duration: 3s;
+    transform-origin: top;
+    animation-iteration-count: 7;
+    animation-delay: 1s;
+    animation-direction: alternate;
+  }
+
+  .line28{
+    height: 90%;
+    width: 1px;
+    background-color: black;
+    grid-column: 7;
+    grid-row: 2 / 9;
+    justify-self: center;
+    animation-name: liniengrowing;
+    animation-duration: 3s;
+    transform-origin: top;
+    animation-iteration-count: 7;
+    animation-delay: 2s;
+    animation-direction: alternate;
+  }
+
+  .line28rahmen{
+    height: 90%;
+    width: 1px;
+    background-color: black;
+    grid-column: 1;
+    grid-row: 2 / 9;
+    justify-self: end;
+  }
+
+  .line29{
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    grid-column: 3;
+    grid-row: 2 / 10;
+    justify-self: end;
+  }
+
+  .line29next{
+    height: 95%;
+    width: 1px;
+    background-color: black;
+    grid-column: 4;
+    grid-row: 2 / 9;
+    justify-self: end;
+  }
+
+  .linelast{
+    height: 100%;
+    width: 1px;
+    background-color: black;
+    grid-column: 7;
+    grid-row: 2 / 6;
+    justify-self: end;
+  }
+
+  .star{
+    background-color: var(--background);
+    justify-self: center;
+    padding-top: 30px;
+    font-size: 40px;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .star div{
+    transform-origin: center;
+    animation-name: sternli;
+    animation-duration: 2s;
+    animation-iteration-count: 7;
+    animation-direction: alternate;
+    height: 25px;
+  }
+
+  .B2{
+    background-color: var(--background);
+    justify-self: center;
+    font-size: 30px;
+    align-self: end;
+    grid-column: 2;
+    grid-row: 2;
+    
+  }
+
+  .CD2{
+    background-color: var(--background);
+    grid-column: 3 / 5;
+    grid-row: 2;
+    font-size: 30px;
+    justify-self: center;
+    align-self: end;
+  }
+
+  .DE2{
+    grid-column: 4 / 6;
+    grid-row: 2;
+    font-size: 30px;
+    align-self: end;
+    justify-self: center;
+  }
+
+  .E2{
+    grid-column: 5 / 6;
+    grid-row: 2;
+    align-self: end;
+    justify-self: center;
+    font-size: 30px;
+  }
+
+  .bigi{
+    font-size: 70px;
+    font-weight: bold;
+    justify-self: center;
+    grid-column: 3;
+    grid-row: 3;
+    align-self: end;
+    /*
+    transition-property: all;
+    transform-origin: top;
+    transform: scaleY(2);
+    */
+  }
+
+  .CD3{
+    font-size: 30px;
+    grid-column: 3 / 5;
+    grid-row: 3;
+    justify-self: center;
+    align-self: end;
+  }
+
+  .E3{
+    font-size: 30px;
+    justify-self: center;
+    align-self: end;
+    grid-row: 3;
+    grid-column: 5;
+  }
+
+  .F3{
+    font-size: 30px;
+    justify-self: center;
+    align-self: end;
+    grid-row: 3;
+    grid-column: 6;
+  }
+
+  .G3{
+    font-size: 30px;
+    justify-self: center;
+    align-self: end;
+    grid-row: 3;
+    grid-column: 7;
+  }
+
+  .bigf{
+    font-size: 70px;
+    font-weight: bold;
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 4;
+    align-self: end;
+  }
+
+  .bigs{
+    font-size: 70px;
+    font-weight: bold;
+    align-self: end;
+    grid-column: 5;
+    grid-row: 4;
+  }
+
+  .bigh{
+    font-size: 70px;
+    font-weight: bold;
+    grid-column: 6;
+    grid-row: 4 / 6;
+    justify-self: center;
+    align-self: center;
+    transform: translateX(-5px);
+  }
+
+  .UTS{
+    font-size: 25px;
+    grid-column: 7 / 9;
+    grid-row: 4;
+    justify-self: center;
+  }
+
+  .FM{
+    font-size: 20px;
+    grid-column: 2;
+    grid-row: 5 / 7;
+    justify-self: center;
+    align-self: end;
+    transform: translateX(9px) translateY(-85px) rotate(-90deg);
+  }
+
+  .at{
+    font-size: 15px;
+    align-self: end;
+    grid-column: 4 / 6;
+    grid-row: 5;
+    justify-self: center;
+  }
+
+  .th{
+    font-size: 15px;
+    grid-column: 6;
+    grid-row: 5;
+    align-self: end;
+    justify-self: center;
+  }
+
+  .lile{
+    font-size: 15px;
+    grid-column: 7;
+    grid-row: 5;
+    align-self: end;
+    justify-self: center;
+  }
+
+  .striche{
+    grid-column: 8;
+    grid-row: 5;
+    align-self: end;
+    transform: rotate(-90deg) translateX(30px);
+  }
+
+  .bigi2{
+    font-size: 70px;
+    font-weight: bold;
+    justify-self: center;
+    grid-column: 3;
+    grid-row: 6;
+    align-self: end;
+  }
+
+  .F67{
+    font-size: 20px;
+    grid-column: 6;
+    grid-row: 6 / 8;
+    justify-self: center;
+    align-self: end;
+    transform: translateX(-9px) translateY(-85px) rotate(-90deg);
+  }
+
+  .AB7{
+    font-size: 30px;
+    grid-column: 1 / 3;
+    grid-row: 7;
+    justify-self: center;
+    align-self: end;
+  }
+
+  .punkt{
+    width: 37px;
+    height: 37px;
+    grid-column: 3;
+    grid-row: 7;
+    background-color: black;
+    border-radius: 50%;
+    align-self: end;
+    justify-self: center;
+    transform: translateY(6px);
+  }
+
+  .CD7{
+    font-size: 30px;
+    grid-column: 3 / 5;
+    grid-row: 7;
+    align-self: end;
+    justify-self: center;
+  }
+
+  .DE7{
+    font-size: 30px;
+    grid-column: 4 / 6;
+    grid-row: 7;
+    align-self: end;
+    justify-self: center;
+  }
+
+  .bigg{
+    font-size: 70px;
+    font-weight: bold;
+    justify-self: center;
+    grid-column: 7;
+    grid-row: 7;
+    align-self: end;
+    transform: translateX(25px) translateY(-40px);
+  }
+
+  .cast{
+    font-size: 20px;
+    word-spacing: 5px;
+    grid-column: 4;
+    grid-row: 8;
+    justify-self: center;
+    align-self: end;
+    transform: translateX(-30px) translateY(-20px) rotate(-90deg);
+  }
+
+  .e{
+    font-size: 20px;
+    grid-column: 4;
+    grid-row: 8;
+    align-self: end;
+    transform: translateX(-10px) translateY(-37px) rotate(-90deg);
+  }
+
+  .bign{
+    font-size: 70px;
+    font-weight: bold;
+    justify-self: center;
+    grid-column: 5;
+    grid-row: 8;
+    align-self: end;
+    transform: translateX(-15px)  translateY(20px);
+  }
+
+  .broad{
+    font-size: 20px;
+    grid-column: 4;
+    grid-row: 9;
+    justify-self: center;
+    align-self: end;
+    transform: translateX(-30px) translateY(-20px) rotate(-90deg);
+  }
+
+  .liv{
+    font-size: 20px;
+    word-spacing: 5px;
+    grid-column: 4;
+    grid-row: 9;
+    align-self: end;
+    transform: translateX(-10px) translateY(-37px) rotate(-90deg);
+  }
+
+  .F9{
+    font-size: 20px;
+    font-weight: bold;
+    justify-self: end;
+    align-self: center;
+    transform: translateX(2px);
+    grid-column: 6;
+    grid-row: 9;
+  }
+
+  .F9friday{
+    font-size: 20px;
+    align-self: end;
+    justify-self: center;
+    grid-column: 6;
+    grid-row: 9;
+    transform: translateX(10px);
+  }
+
+  .FG9{
+    font-size: 20px;
+    align-self: end;
+    justify-self: center;
+    grid-column: 6 / 8;
+    grid-row: 9;
+  }
+
+  .G9{
+    font-size: 20px;
+    word-spacing: 5px;
+    align-self: end;
+    justify-self: center;
+    grid-column: 7;
+    grid-row: 9;
+    transform: translateX(12px);
+  }
+
+  .E10{
+    font-size: 20px;
+    justify-self: center;
+    grid-column: 5;
+    grid-row: 10;
+  }
+
+  .august{
+    font-size: 20px;
+    justify-self: center;
+    grid-column: 6;
+    grid-row: 10;
+    transform: translateX(28px);
+  }
+
+  .year{
+    font-size: 20px;
+    letter-spacing: 6px;
+    justify-self: center;
+    align-self: end;
+    grid-column: 5;
+    grid-row: 10;
+    transform: translateX(-15px);
+  }
+
+  
+  
+  
+
