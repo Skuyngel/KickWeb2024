@@ -2,31 +2,85 @@
 /* (A) WRAPPER */
 #hamnav {
   width: 100%;
-  background: #000;
+  background: rgb(248, 242, 234);
   /* Optional */
   position: sticky;
   top: 0;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Set height of the navbar to full viewport height */
 }
 
 /* (B) HORIZONTAL MENU ITEMS */
-#hamitems { display: flex; }
+#hamitems {
+  display: flex;
+  background: rgb(248, 242, 234);
+  height: 100vh;
+  position: relative;
+}
+
 #hamitems a {
   flex-grow: 1;
   flex-basis: 0;
   padding: 10px;
-  color: white;
+  color: black; /* Keep text color as black */
   text-decoration: none;
   text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow for the line */
 }
-#hamitems a:hover { background: #af0d0d; }
+
+#hamitems a::before,
+#hamitems a::after {
+  content: ''; /* Create pseudo-elements for the lines */
+  position: absolute;
+  /*left: 3px; /* Adjust position of the lines */
+  width: 1px; /* Width of the lines */
+  background: black; /* Line color */
+  transition: height 0.9s ease; /* Add transition for animation */
+}
+
+#hamitems a::before {
+  top: 100%;
+  transform: translateY(-50%);
+  height: 0; /* Initial height set to 0 */
+}
+
+#hamitems a::after {
+  bottom: 100%;
+  transform: translateY(50%);
+  height: 0; /* Initial height set to 0 */
+}
+
+#hamitems a:hover::before,
+#hamitems a:hover::after {
+  height: calc(50% - 15px); /* Extend the lines to half height on hover */
+}
+
+#hamitems a:hover {
+  color: black; /* Keep text color as black on hover */
+  z-index: 1; /* Ensure text is on top of the lines */
+}
+
+/* Make first letter bigger and bold */
+#hamitems a::first-letter {
+  font-size: 120%; /* Increase size by 20% */
+  font-weight: bold;
+}
 
 /* (C) HIDE HAMBURGER */
-#hamnav label, #hamburger { display: none; }
+#hamnav label,
+#hamburger {
+  display: none;
+}
 
 /* [ON SMALL SCREENS] */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 390px) {
   /* (A) BREAK INTO VERTICAL MENU */
-  #hamitems a {
+  /*#hamitems a {
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -34,7 +88,7 @@
   }
 
   /* (B) SHOW HAMBURGER ICON */
-  #hamnav label {
+  /*#hamnav label {
     display: inline-block;
     color: white;
     background: #a02620;
@@ -44,13 +98,21 @@
   }
 
   /* (C) TOGGLE SHOW/HIDE MENU */
-  #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: block; }
+  #hamitems {
+    display: none;
+  }
+
+  #hamnav input:checked~#hamitems {
+    display: block;
+  }
 }
 
 /* [DOES NOT MATTER] */
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   font-family: arial, sans-serif;
 }
+
+
