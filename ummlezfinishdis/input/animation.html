@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="animation.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent container">
+        <div class="text">animations on curved paths</div>
+        <div class="child one">
+            <div class="line"></div>
+            <div class="ball straight"></div> <!-- New ball element -->
+        </div>
+        <div class="info one">animation on a straight path</div>
+        <div class="child two">
+            <svg class="curve" viewBox="0 0 100 100">
+                <path d="M 10,90 Q 50,10 90,90" fill="none" stroke="black"/>
+            </svg>
+        </div>
+        <div class="info two">the path we want</div>
+        <div class="child three">
+                <svg class="curve" viewBox="0 0 100 100">
+                    <path d="M 10,90 Q 50,10 90,90" fill="none" stroke="black"/>
+                </svg>
+                <div class="bola"></div>
+            
+        </div>
+        <div class="info three">animation on our desired path</div>
+    </div>
+</body>
+
+</html>
